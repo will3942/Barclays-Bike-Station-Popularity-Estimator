@@ -1,0 +1,6 @@
+require "net/http"
+require "uri"
+require "rubygems"
+require "xmlsimple"
+require "mysql2"
+require "logger"
