@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Station name</th>
+        <th>Number of bike additions/removals</th>
+        <th>Date/time of last addition/removal</th>
+      </tr>
+
+      <% @results.each do |row| %>
+        <tr>
+          <td><a href="http://maps.google.com/?q=<%= row["Latitude"] %>,<%= row["Longitude"] %>"><%= row["Name"] %></a></td>
+          <td><%= row["Changes"] %></td>
+          <td><%= row["TimeDateChanged"] %></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
