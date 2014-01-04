@@ -1,4 +1,9 @@
-load "config.rb"
+require "bundler/setup"
+require "net/http"
+require "uri"
+require "xmlsimple"
+require "mysql2"
+require "logger"
 
 db = Mysql2::Client.new(:host => "DB_SERVER", :username => "DB_USERNAME", :password => "DB_PASSWORD", :database => "DB_DATABASE")
 uri = URI.parse("http://www.tfl.gov.uk/tfl/syndication/feeds/cycle-hire/livecyclehireupdates.xml")
